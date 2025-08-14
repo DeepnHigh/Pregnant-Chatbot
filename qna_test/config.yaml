@@ -1,0 +1,23 @@
+llm:
+  model_id: rtzr/ko-gemma-2-9b-it
+  # davidkim205/ko-gemma-3-12b, beomi/Llama-3-Open-Ko-8B, rtzr/ko-gemma-2-9b-it
+  temperature: 0.6
+  top_p: 0.9
+  max_new_tokens: 512
+
+rag:
+  data_path: "../dataset/expert_qna.xlsx"
+  sheet_name: "Sheet1"
+  question_column: "질문"
+  answer_column: "답변"
+  faiss_index_path: "./embeddings/faiss_index.idx"
+  embedding_model: "jhgan/ko-sbert-sts"
+  top_k: 3
+
+test:
+  data_path: "./generated_test_questions.xlsx"
+  sheet_name: "Sheet1"
+  question_column: "테스트질문"
+  original_q_ind: "원본 질문 번호"
+  at_k: 3
+  save_path: "./result/ko-gemma2.csv"
