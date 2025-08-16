@@ -79,6 +79,39 @@ python3 client.py
 }
 ```
 
+### POST /chat/stream
+질문을 전송하고 실시간 스트리밍으로 답변을 받습니다.
+
+**요청:**
+```json
+{
+    "question": "임신 중 운동은 언제부터 시작할 수 있나요?",
+    "user_id": "optional_user_id"
+}
+```
+
+**응답 (Server-Sent Events):**
+```
+data: {"sources": ["dataset/난임 가이드북.pdf"], "type": "sources"}
+
+data: {"token": "임신", "finished": false}
+
+data: {"token": "중", "finished": false}
+
+data: {"token": "운동", "finished": false}
+
+...
+
+data: {"token": "", "finished": true}
+```
+
+**특징:**
+- Content-Type: `text/plain`
+- Server-Sent Events (SSE) 프로토콜 사용
+- 토큰별 실시간 스트리밍
+- 소스 정보 먼저 전송 후 답변 스트리밍
+- `finished: true`로 완료 신호
+
 ### GET /health
 서버 상태를 확인합니다.
 
