@@ -2,3 +2,4 @@
 /qna_test/:~
 /qna_test/result
 /embeddings
+/vectorstore
