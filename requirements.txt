@@ -1,0 +1,24 @@
+# Python 3.11 호환 버전 - Anaconda preg 환경용 (4-bit 양자화 지원)
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.11.7
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-text-splitters==0.3.9
+faiss-cpu==1.12.0
+sentence-transformers==5.1.0
+pypdf2==3.0.1
+openpyxl==3.1.2
+pandas==2.3.1
+numpy==2.3.2
+transformers==4.55.2
+torch==2.8.0
+accelerate==1.10.0
+bitsandbytes==0.47.0
+python-multipart==0.0.6
+requests==2.31.0
+tiktoken==0.11.0
+# 4-bit 양자화를 위한 추가 패키지
+optimum==1.20.1
+auto-gptq==0.8.0
+rank_bm25==0.2.2

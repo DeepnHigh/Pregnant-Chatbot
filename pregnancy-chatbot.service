@@ -1,0 +1,15 @@
+[Unit]
+Description=Pregnancy RAG Chatbot Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/mnt/hdd_sda/projects/STEAM
+Environment=PATH=/mnt/hdd_sda/.conda/envs/preg/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/mnt/hdd_sda/.conda/envs/preg/bin/python /mnt/hdd_sda/projects/STEAM/chatbot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
