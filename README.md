@@ -123,15 +123,17 @@ dataset/
 ### 서버 시작
 ```bash
 # 서버 실행
-python3 chatbot.py
+python3 chatbot_v0.1.py
 
-# 서버가 http://localhost:8000 에서 실행됩니다
+# 서버가 http://localhost:9000 에서 실행됩니다
 ```
 
 ### 클라이언트 사용
 ```bash
 # 클라이언트 실행
 python3 client.py
+
+- 클라이언트 pc에서 실행하여야 합니다.
 
 # 질문 예시
 질문: 임신 중 금기 식품은 무엇인가요?
@@ -167,7 +169,13 @@ sudo journalctl -u pregnancy-chatbot -f
    - 디스크 공간 확인
 
 3. **API 연결 실패**
-   - 서버가 실행 중인지 확인: `curl http://localhost:8000/health`
+   - 서버가 실행 중인지 확인: `curl http://localhost:9000/health`
+   - 방화벽 설정 확인
+
+4. **스트리밍 연결 실패**
+   - 클라이언트에서 "❌ 스트리밍 연결 실패" 오류 시
+   - 서버 로그에서 TextIteratorStreamer 관련 오류 확인
+   - 모델 메모리 부족 시 4-bit 양자화 설정 확인
    - 방화벽 설정 확인
 
 ## 라이선스
