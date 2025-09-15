@@ -1,0 +1,983 @@
+2025-09-15T20:20:24: INFO:__main__:GPU 개수: 2
+2025-09-15T20:20:24: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:20:24: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:20:24: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:20:24: INFO:     Started server process [3633829]
+2025-09-15T20:20:24: INFO:     Waiting for application startup.
+2025-09-15T20:20:24: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:20:24: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:20:24: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:20:24: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:20:24:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:20:24: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:20:29: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:20:29: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:20:29: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:20:29: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:20:29: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:20:29: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:20:29: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:20:29: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:20:29: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:20:29: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:20:29: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:20:30: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:20:30: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:20:30: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:20:31: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:20:31: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.67it/s]
+2025-09-15T20:20:31: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.86it/s]
+2025-09-15T20:20:32: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.63it/s]
+2025-09-15T20:20:32: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.31it/s]
+2025-09-15T20:20:33: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.16it/s]
+2025-09-15T20:20:33: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.06it/s]
+2025-09-15T20:20:34: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.98it/s]
+2025-09-15T20:20:34: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.93it/s]
+2025-09-15T20:20:35: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.91it/s]
+2025-09-15T20:20:35: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.38it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.22it/s]
+2025-09-15T20:20:36: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:20:36: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:20:36: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:20:36: INFO:     Application startup complete.
+2025-09-15T20:20:36: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:20:54: INFO:     Shutting down
+2025-09-15T20:20:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:20:54: INFO:     Application shutdown complete.
+2025-09-15T20:20:54: INFO:     Finished server process [3633829]
+2025-09-15T20:20:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:20:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:20:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:20:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:20:57: INFO:     Started server process [3635749]
+2025-09-15T20:20:57: INFO:     Waiting for application startup.
+2025-09-15T20:20:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:20:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:20:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:20:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:20:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:20:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:21:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:21:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:21:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:21:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:21:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:21:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:21:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:21:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:21:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:21:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:21:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:21:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:21:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:21:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:21:04: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:21:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.71it/s]
+2025-09-15T20:21:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.70it/s]
+2025-09-15T20:21:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.61it/s]
+2025-09-15T20:21:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.29it/s]
+2025-09-15T20:21:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.14it/s]
+2025-09-15T20:21:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.07it/s]
+2025-09-15T20:21:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.01it/s]
+2025-09-15T20:21:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.96it/s]
+2025-09-15T20:21:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.94it/s]
+2025-09-15T20:21:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.41it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.23it/s]
+2025-09-15T20:21:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:21:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:21:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:21:09: INFO:     Application startup complete.
+2025-09-15T20:21:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:21:24: INFO:     Shutting down
+2025-09-15T20:21:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:21:24: INFO:     Application shutdown complete.
+2025-09-15T20:21:24: INFO:     Finished server process [3635749]
+2025-09-15T20:21:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:21:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:21:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:21:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:21:27: INFO:     Started server process [3637656]
+2025-09-15T20:21:27: INFO:     Waiting for application startup.
+2025-09-15T20:21:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:21:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:21:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:21:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:21:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:21:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:21:33: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:21:33: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:21:33: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:21:33: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:21:33: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:21:33: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:21:33: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:21:33: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:21:33: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:21:33: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:21:33: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:21:34: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:21:34: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:21:34: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:21:35: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:21:35: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.66it/s]
+2025-09-15T20:21:35: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.76it/s]
+2025-09-15T20:21:36: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.61it/s]
+2025-09-15T20:21:36: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.31it/s]
+2025-09-15T20:21:37: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.16it/s]
+2025-09-15T20:21:37: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.07it/s]
+2025-09-15T20:21:38: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.00it/s]
+2025-09-15T20:21:38: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.95it/s]
+2025-09-15T20:21:39: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.93it/s]
+2025-09-15T20:21:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.41it/s]
+2025-09-15T20:21:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.23it/s]
+2025-09-15T20:21:40: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:21:40: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:21:40: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:21:40: INFO:     Application startup complete.
+2025-09-15T20:21:40: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:21:54: INFO:     Shutting down
+2025-09-15T20:21:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:21:54: INFO:     Application shutdown complete.
+2025-09-15T20:21:54: INFO:     Finished server process [3637656]
+2025-09-15T20:21:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:21:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:21:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:21:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:21:57: INFO:     Started server process [3639058]
+2025-09-15T20:21:57: INFO:     Waiting for application startup.
+2025-09-15T20:21:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:21:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:21:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:21:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:21:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:21:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:22:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:22:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:22:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:22:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:22:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:22:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:22:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:22:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:22:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:22:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:22:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:22:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:22:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:22:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:22:03: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:22:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.73it/s]
+2025-09-15T20:22:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.82it/s]
+2025-09-15T20:22:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.62it/s]
+2025-09-15T20:22:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.29it/s]
+2025-09-15T20:22:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.15it/s]
+2025-09-15T20:22:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.06it/s]
+2025-09-15T20:22:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.00it/s]
+2025-09-15T20:22:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.96it/s]
+2025-09-15T20:22:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.93it/s]
+2025-09-15T20:22:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.41it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.24it/s]
+2025-09-15T20:22:08: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:22:08: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:22:08: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:22:08: INFO:     Application startup complete.
+2025-09-15T20:22:08: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:22:24: INFO:     Shutting down
+2025-09-15T20:22:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:22:24: INFO:     Application shutdown complete.
+2025-09-15T20:22:24: INFO:     Finished server process [3639058]
+2025-09-15T20:22:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:22:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:22:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:22:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:22:27: INFO:     Started server process [3640849]
+2025-09-15T20:22:27: INFO:     Waiting for application startup.
+2025-09-15T20:22:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:22:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:22:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:22:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:22:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:22:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:22:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:22:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:22:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:22:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:22:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:22:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:22:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:22:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:22:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:22:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:22:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:22:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:22:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:22:33: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:22:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:22:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.70it/s]
+2025-09-15T20:22:34: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.71it/s]
+2025-09-15T20:22:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.58it/s]
+2025-09-15T20:22:35: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.28it/s]
+2025-09-15T20:22:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.14it/s]
+2025-09-15T20:22:36: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.06it/s]
+2025-09-15T20:22:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.00it/s]
+2025-09-15T20:22:37: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.96it/s]
+2025-09-15T20:22:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.93it/s]
+2025-09-15T20:22:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.41it/s]
+2025-09-15T20:22:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.23it/s]
+2025-09-15T20:22:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:22:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:22:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:22:39: INFO:     Application startup complete.
+2025-09-15T20:22:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:22:54: INFO:     Shutting down
+2025-09-15T20:22:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:22:54: INFO:     Application shutdown complete.
+2025-09-15T20:22:54: INFO:     Finished server process [3640849]
+2025-09-15T20:22:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:22:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:22:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:22:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:22:57: INFO:     Started server process [3642227]
+2025-09-15T20:22:57: INFO:     Waiting for application startup.
+2025-09-15T20:22:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:22:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:22:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:22:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:22:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:22:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:23:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:23:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:23:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:23:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:23:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:23:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:23:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:23:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:23:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:23:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:23:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:23:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:23:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:23:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:23:04: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:23:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.68it/s]
+2025-09-15T20:23:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:03,  2.60it/s]
+2025-09-15T20:23:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.54it/s]
+2025-09-15T20:23:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.26it/s]
+2025-09-15T20:23:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.13it/s]
+2025-09-15T20:23:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.05it/s]
+2025-09-15T20:23:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.98it/s]
+2025-09-15T20:23:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.95it/s]
+2025-09-15T20:23:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.93it/s]
+2025-09-15T20:23:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.40it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.21it/s]
+2025-09-15T20:23:08: 
+2025-09-15T20:23:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:23:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:23:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:23:09: INFO:     Application startup complete.
+2025-09-15T20:23:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:23:24: INFO:     Shutting down
+2025-09-15T20:23:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:23:24: INFO:     Application shutdown complete.
+2025-09-15T20:23:24: INFO:     Finished server process [3642227]
+2025-09-15T20:23:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:23:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:23:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:23:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:23:27: INFO:     Started server process [3643915]
+2025-09-15T20:23:27: INFO:     Waiting for application startup.
+2025-09-15T20:23:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:23:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:23:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:23:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:23:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:23:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:23:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:23:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:23:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:23:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:23:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:23:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:23:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:23:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:23:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:23:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:23:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:23:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:23:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:23:34: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:23:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:23:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.70it/s]
+2025-09-15T20:23:35: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.88it/s]
+2025-09-15T20:23:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.67it/s]
+2025-09-15T20:23:36: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.32it/s]
+2025-09-15T20:23:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.16it/s]
+2025-09-15T20:23:37: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.07it/s]
+2025-09-15T20:23:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.99it/s]
+2025-09-15T20:23:38: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.94it/s]
+2025-09-15T20:23:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.92it/s]
+2025-09-15T20:23:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.39it/s]
+2025-09-15T20:23:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.24it/s]
+2025-09-15T20:23:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:23:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:23:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:23:39: INFO:     Application startup complete.
+2025-09-15T20:23:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:23:54: INFO:     Shutting down
+2025-09-15T20:23:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:23:54: INFO:     Application shutdown complete.
+2025-09-15T20:23:54: INFO:     Finished server process [3643915]
+2025-09-15T20:23:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:23:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:23:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:23:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:23:57: INFO:     Started server process [3645204]
+2025-09-15T20:23:57: INFO:     Waiting for application startup.
+2025-09-15T20:23:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:23:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:23:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:23:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:23:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:23:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:24:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:24:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:24:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:24:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:24:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:24:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:24:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:24:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:24:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:24:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:24:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:24:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:24:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:24:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:24:04: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:24:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.62it/s]
+2025-09-15T20:24:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.74it/s]
+2025-09-15T20:24:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.67it/s]
+2025-09-15T20:24:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.33it/s]
+2025-09-15T20:24:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.17it/s]
+2025-09-15T20:24:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.07it/s]
+2025-09-15T20:24:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.00it/s]
+2025-09-15T20:24:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.95it/s]
+2025-09-15T20:24:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.93it/s]
+2025-09-15T20:24:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.40it/s]
+2025-09-15T20:24:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.24it/s]
+2025-09-15T20:24:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:24:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:24:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:24:09: INFO:     Application startup complete.
+2025-09-15T20:24:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:24:24: INFO:     Shutting down
+2025-09-15T20:24:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:24:24: INFO:     Application shutdown complete.
+2025-09-15T20:24:24: INFO:     Finished server process [3645204]
+2025-09-15T20:24:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:24:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:24:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:24:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:24:27: INFO:     Started server process [3646910]
+2025-09-15T20:24:27: INFO:     Waiting for application startup.
+2025-09-15T20:24:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:24:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:24:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:24:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:24:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:24:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:24:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:24:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:24:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:24:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:24:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:24:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:24:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:24:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:24:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:24:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:24:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:24:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:24:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:24:33: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:24:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:24:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.69it/s]
+2025-09-15T20:24:34: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.67it/s]
+2025-09-15T20:24:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.54it/s]
+2025-09-15T20:24:35: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.26it/s]
+2025-09-15T20:24:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.14it/s]
+2025-09-15T20:24:36: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.07it/s]
+2025-09-15T20:24:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  2.01it/s]
+2025-09-15T20:24:37: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.97it/s]
+2025-09-15T20:24:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.95it/s]
+2025-09-15T20:24:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.42it/s]
+2025-09-15T20:24:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.23it/s]
+2025-09-15T20:24:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:24:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:24:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:24:39: INFO:     Application startup complete.
+2025-09-15T20:24:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:24:54: INFO:     Shutting down
+2025-09-15T20:24:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:24:54: INFO:     Application shutdown complete.
+2025-09-15T20:24:54: INFO:     Finished server process [3646910]
+2025-09-15T20:24:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:24:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:24:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:24:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:24:57: INFO:     Started server process [3648227]
+2025-09-15T20:24:57: INFO:     Waiting for application startup.
+2025-09-15T20:24:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:24:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:24:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:24:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:24:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:24:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:25:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:25:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:25:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:25:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:25:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:25:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:25:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:25:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:25:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:25:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:25:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:25:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:25:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:25:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:25:03: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:25:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.64it/s]
+2025-09-15T20:25:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.69it/s]
+2025-09-15T20:25:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.52it/s]
+2025-09-15T20:25:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.26it/s]
+2025-09-15T20:25:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.13it/s]
+2025-09-15T20:25:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.05it/s]
+2025-09-15T20:25:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.98it/s]
+2025-09-15T20:25:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.94it/s]
+2025-09-15T20:25:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.92it/s]
+2025-09-15T20:25:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.39it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.21it/s]
+2025-09-15T20:25:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:25:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:25:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:25:09: INFO:     Application startup complete.
+2025-09-15T20:25:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:25:24: INFO:     Shutting down
+2025-09-15T20:25:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:25:24: INFO:     Application shutdown complete.
+2025-09-15T20:25:24: INFO:     Finished server process [3648227]
+2025-09-15T20:25:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:25:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:25:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:25:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:25:27: INFO:     Started server process [3649913]
+2025-09-15T20:25:27: INFO:     Waiting for application startup.
+2025-09-15T20:25:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:25:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:25:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:25:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:25:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:25:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:25:33: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:25:33: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:25:33: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:25:33: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:25:33: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:25:33: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:25:33: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:25:33: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:25:33: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:25:33: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:25:33: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:25:34: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:25:34: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:25:34: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:25:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:25:35: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.54it/s]
+2025-09-15T20:25:35: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.80it/s]
+2025-09-15T20:25:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.58it/s]
+2025-09-15T20:25:36: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.24it/s]
+2025-09-15T20:25:37: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.08it/s]
+2025-09-15T20:25:37: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.98it/s]
+2025-09-15T20:25:38: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.92it/s]
+2025-09-15T20:25:38: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.88it/s]
+2025-09-15T20:25:39: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.85it/s]
+2025-09-15T20:25:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.31it/s]
+2025-09-15T20:25:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.15it/s]
+2025-09-15T20:25:40: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:25:40: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:25:40: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:25:40: INFO:     Application startup complete.
+2025-09-15T20:25:40: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:25:54: INFO:     Shutting down
+2025-09-15T20:25:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:25:54: INFO:     Application shutdown complete.
+2025-09-15T20:25:54: INFO:     Finished server process [3649913]
+2025-09-15T20:25:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:25:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:25:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:25:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:25:57: INFO:     Started server process [3651197]
+2025-09-15T20:25:57: INFO:     Waiting for application startup.
+2025-09-15T20:25:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:25:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:25:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:25:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:25:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:25:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:26:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:26:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:26:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:26:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:26:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:26:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:26:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:26:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:26:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:26:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:26:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:26:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:26:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:26:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:26:03: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:26:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.55it/s]
+2025-09-15T20:26:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:03,  2.51it/s]
+2025-09-15T20:26:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.41it/s]
+2025-09-15T20:26:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.14it/s]
+2025-09-15T20:26:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.02it/s]
+2025-09-15T20:26:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.95it/s]
+2025-09-15T20:26:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.90it/s]
+2025-09-15T20:26:07: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.87it/s]
+2025-09-15T20:26:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.86it/s]
+2025-09-15T20:26:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.31it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.12it/s]
+2025-09-15T20:26:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:26:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:26:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:26:09: INFO:     Application startup complete.
+2025-09-15T20:26:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:26:24: INFO:     Shutting down
+2025-09-15T20:26:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:26:24: INFO:     Application shutdown complete.
+2025-09-15T20:26:24: INFO:     Finished server process [3651197]
+2025-09-15T20:26:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:26:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:26:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:26:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:26:27: INFO:     Started server process [3652879]
+2025-09-15T20:26:27: INFO:     Waiting for application startup.
+2025-09-15T20:26:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:26:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:26:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:26:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:26:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:26:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:26:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:26:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:26:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:26:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:26:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:26:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:26:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:26:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:26:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:26:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:26:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:26:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:26:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:26:33: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:26:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:26:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.50it/s]
+2025-09-15T20:26:34: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.69it/s]
+2025-09-15T20:26:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.40it/s]
+2025-09-15T20:26:35: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.16it/s]
+2025-09-15T20:26:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.03it/s]
+2025-09-15T20:26:36: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.97it/s]
+2025-09-15T20:26:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.92it/s]
+2025-09-15T20:26:37: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.89it/s]
+2025-09-15T20:26:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.87it/s]
+2025-09-15T20:26:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.34it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.14it/s]
+2025-09-15T20:26:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:26:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:26:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:26:39: INFO:     Application startup complete.
+2025-09-15T20:26:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:26:54: INFO:     Shutting down
+2025-09-15T20:26:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:26:54: INFO:     Application shutdown complete.
+2025-09-15T20:26:54: INFO:     Finished server process [3652879]
+2025-09-15T20:26:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:26:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:26:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:26:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:26:57: INFO:     Started server process [3654265]
+2025-09-15T20:26:57: INFO:     Waiting for application startup.
+2025-09-15T20:26:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:26:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:26:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:26:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:26:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:26:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:27:03: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:27:03: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:27:03: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:27:03: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:27:03: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:27:03: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:27:03: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:27:03: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:27:03: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:27:03: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:27:03: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:27:04: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:27:04: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:27:04: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:27:04: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:27:05: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.44it/s]
+2025-09-15T20:27:05: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.67it/s]
+2025-09-15T20:27:06: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.45it/s]
+2025-09-15T20:27:06: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.21it/s]
+2025-09-15T20:27:07: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.07it/s]
+2025-09-15T20:27:07: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.99it/s]
+2025-09-15T20:27:08: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.93it/s]
+2025-09-15T20:27:08: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.88it/s]
+2025-09-15T20:27:09: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.86it/s]
+2025-09-15T20:27:09: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.32it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.15it/s]
+2025-09-15T20:27:10: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:27:10: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:27:10: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:27:10: INFO:     Application startup complete.
+2025-09-15T20:27:10: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:27:24: INFO:     Shutting down
+2025-09-15T20:27:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:27:24: INFO:     Application shutdown complete.
+2025-09-15T20:27:24: INFO:     Finished server process [3654265]
+2025-09-15T20:27:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:27:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:27:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:27:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:27:27: INFO:     Started server process [3656038]
+2025-09-15T20:27:27: INFO:     Waiting for application startup.
+2025-09-15T20:27:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:27:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:27:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:27:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:27:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:27:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:27:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:27:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:27:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:27:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:27:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:27:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:27:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:27:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:27:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:27:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:27:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:27:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:27:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:27:33: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:27:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:27:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.56it/s]
+2025-09-15T20:27:34: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:03,  2.59it/s]
+2025-09-15T20:27:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.47it/s]
+2025-09-15T20:27:35: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.19it/s]
+2025-09-15T20:27:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.06it/s]
+2025-09-15T20:27:36: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.98it/s]
+2025-09-15T20:27:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.93it/s]
+2025-09-15T20:27:37: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.90it/s]
+2025-09-15T20:27:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.88it/s]
+2025-09-15T20:27:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.33it/s]
+2025-09-15T20:27:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.15it/s]
+2025-09-15T20:27:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:27:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:27:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:27:39: INFO:     Application startup complete.
+2025-09-15T20:27:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:27:54: INFO:     Shutting down
+2025-09-15T20:27:54: INFO:     Waiting for application shutdown.
+2025-09-15T20:27:54: INFO:     Application shutdown complete.
+2025-09-15T20:27:54: INFO:     Finished server process [3656038]
+2025-09-15T20:27:57: INFO:__main__:GPU 개수: 2
+2025-09-15T20:27:57: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:27:57: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:27:57: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:27:57: INFO:     Started server process [3657452]
+2025-09-15T20:27:57: INFO:     Waiting for application startup.
+2025-09-15T20:27:57: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:27:57: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:27:57: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:27:57: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:27:57:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:27:57: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:28:02: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:28:02: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:28:02: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:28:02: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:28:02: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:28:02: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:28:02: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:28:02: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:28:02: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:28:02: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:28:02: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:28:03: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:28:03: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:28:03: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:28:04: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:28:04: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.52it/s]
+2025-09-15T20:28:04: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.78it/s]
+2025-09-15T20:28:05: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.56it/s]
+2025-09-15T20:28:05: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.23it/s]
+2025-09-15T20:28:06: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.09it/s]
+2025-09-15T20:28:06: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  2.00it/s]
+2025-09-15T20:28:07: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.93it/s]
+2025-09-15T20:28:08: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.90it/s]
+2025-09-15T20:28:08: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.88it/s]
+2025-09-15T20:28:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.35it/s]
+2025-09-15T20:28:08: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.17it/s]
+2025-09-15T20:28:09: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:28:09: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:28:09: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:28:09: INFO:     Application startup complete.
+2025-09-15T20:28:09: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:28:24: INFO:     Shutting down
+2025-09-15T20:28:24: INFO:     Waiting for application shutdown.
+2025-09-15T20:28:24: INFO:     Application shutdown complete.
+2025-09-15T20:28:24: INFO:     Finished server process [3657452]
+2025-09-15T20:28:27: INFO:__main__:GPU 개수: 2
+2025-09-15T20:28:27: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:28:27: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:28:27: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:28:27: INFO:     Started server process [3659379]
+2025-09-15T20:28:27: INFO:     Waiting for application startup.
+2025-09-15T20:28:27: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:28:27: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:28:27: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:28:27: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:28:27:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:28:27: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:28:32: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:28:32: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:28:32: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:28:32: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:28:32: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:28:32: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:28:32: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:28:32: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:28:32: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:28:32: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:28:32: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:28:33: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:28:33: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:28:33: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:28:34: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:28:34: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.52it/s]
+2025-09-15T20:28:34: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.71it/s]
+2025-09-15T20:28:35: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.48it/s]
+2025-09-15T20:28:35: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.19it/s]
+2025-09-15T20:28:36: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.04it/s]
+2025-09-15T20:28:36: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.95it/s]
+2025-09-15T20:28:37: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.90it/s]
+2025-09-15T20:28:38: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.86it/s]
+2025-09-15T20:28:38: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.85it/s]
+2025-09-15T20:28:38: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.30it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.13it/s]
+2025-09-15T20:28:38: 
+2025-09-15T20:28:39: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:28:39: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:28:39: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:28:39: INFO:     Application startup complete.
+2025-09-15T20:28:39: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:28:39: ERROR:    Traceback (most recent call last):
+2025-09-15T20:28:39:   File "/mnt/hdd_sda/.conda/envs/preg/lib/python3.11/site-packages/starlette/routing.py", line 686, in lifespan
+2025-09-15T20:28:39:     await receive()
+2025-09-15T20:28:39:   File "/mnt/hdd_sda/.conda/envs/preg/lib/python3.11/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2025-09-15T20:28:39:     return await self.receive_queue.get()
+2025-09-15T20:28:39:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-15T20:28:39:   File "/mnt/hdd_sda/.conda/envs/preg/lib/python3.11/asyncio/queues.py", line 158, in get
+2025-09-15T20:28:39:     await getter
+2025-09-15T20:28:39: asyncio.exceptions.CancelledError
+2025-09-15T20:28:39: 
+2025-09-15T20:28:42: INFO:__main__:GPU 개수: 2
+2025-09-15T20:28:42: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:28:42: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:28:42: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:28:42: INFO:     Started server process [3660653]
+2025-09-15T20:28:42: INFO:     Waiting for application startup.
+2025-09-15T20:28:42: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:28:42: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:28:42: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:28:42: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:156: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:28:42:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:28:42: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:28:47: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:28:47: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:28:47: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:28:47: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:28:47: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:28:47: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:28:47: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:28:47: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:28:47: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:28:47: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:28:47: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:28:48: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:28:48: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:28:48: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:28:49: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:28:49: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.41it/s]
+2025-09-15T20:28:49: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:03,  2.65it/s]
+2025-09-15T20:28:50: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.47it/s]
+2025-09-15T20:28:50: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.18it/s]
+2025-09-15T20:28:51: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.04it/s]
+2025-09-15T20:28:51: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.97it/s]
+2025-09-15T20:28:52: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.91it/s]
+2025-09-15T20:28:53: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.88it/s]
+2025-09-15T20:28:53: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.86it/s]
+2025-09-15T20:28:53: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.31it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.13it/s]
+2025-09-15T20:28:54: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:28:54: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:28:54: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:28:54: INFO:     Application startup complete.
+2025-09-15T20:28:54: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:39:01: INFO:     Shutting down
+2025-09-15T20:39:01: INFO:     Waiting for application shutdown.
+2025-09-15T20:39:01: INFO:     Application shutdown complete.
+2025-09-15T20:39:01: INFO:     Finished server process [3660653]
+2025-09-15T20:39:04: INFO:__main__:GPU 개수: 2
+2025-09-15T20:39:04: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:39:04: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:39:04: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:39:04: INFO:     Started server process [3692234]
+2025-09-15T20:39:04: INFO:     Waiting for application startup.
+2025-09-15T20:39:04: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:39:04: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:39:04: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:39:04: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:157: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:39:04:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:39:04: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:39:09: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:39:09: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:39:09: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:39:09: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:39:09: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:39:09: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:39:09: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:39:09: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:39:09: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:39:09: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:39:09: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:39:10: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:39:10: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:39:10: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:39:11: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:39:11: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.64it/s]
+2025-09-15T20:39:11: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.84it/s]
+2025-09-15T20:39:12: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.59it/s]
+2025-09-15T20:39:12: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.24it/s]
+2025-09-15T20:39:13: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.08it/s]
+2025-09-15T20:39:13: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.99it/s]
+2025-09-15T20:39:14: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.92it/s]
+2025-09-15T20:39:15: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.89it/s]
+2025-09-15T20:39:15: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.87it/s]
+2025-09-15T20:39:15: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.34it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.17it/s]
+2025-09-15T20:39:16: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:39:16: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:39:16: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:39:16: INFO:     Application startup complete.
+2025-09-15T20:39:16: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:49:23: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:561: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
+2025-09-15T20:49:23:   docs = chatbot.retriever.get_relevant_documents(request.question)
+2025-09-15T20:52:25: INFO:     Shutting down
+2025-09-15T20:52:25: INFO:     Waiting for application shutdown.
+2025-09-15T20:52:25: INFO:     Application shutdown complete.
+2025-09-15T20:52:25: INFO:     Finished server process [3692234]
+2025-09-15T20:52:29: INFO:__main__:GPU 개수: 2
+2025-09-15T20:52:29: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:52:29: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:52:29: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:52:29: INFO:     Started server process [3733676]
+2025-09-15T20:52:29: INFO:     Waiting for application startup.
+2025-09-15T20:52:29: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:52:29: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:52:29: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:52:29: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:157: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:52:29:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:52:29: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:52:33: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:52:33: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:52:33: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:52:33: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:52:33: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:52:33: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:52:33: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:52:33: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:52:33: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:52:33: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:52:33: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:52:34: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:52:34: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:52:34: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:52:35: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:52:35: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.59it/s]
+2025-09-15T20:52:36: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.82it/s]
+2025-09-15T20:52:36: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.56it/s]
+2025-09-15T20:52:36: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.24it/s]
+2025-09-15T20:52:37: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.08it/s]
+2025-09-15T20:52:38: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.99it/s]
+2025-09-15T20:52:38: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.93it/s]
+2025-09-15T20:52:39: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.89it/s]
+2025-09-15T20:52:39: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.88it/s]
+2025-09-15T20:52:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.34it/s]
+2025-09-15T20:52:39: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.17it/s]
+2025-09-15T20:52:40: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:52:40: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:52:40: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:52:40: INFO:     Application startup complete.
+2025-09-15T20:52:40: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:53:46: INFO:     Shutting down
+2025-09-15T20:53:46: INFO:     Waiting for application shutdown.
+2025-09-15T20:53:46: INFO:     Application shutdown complete.
+2025-09-15T20:53:46: INFO:     Finished server process [3733676]
+2025-09-15T20:53:50: INFO:__main__:GPU 개수: 2
+2025-09-15T20:53:50: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:53:50: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-15T20:53:50: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-15T20:53:50: INFO:     Started server process [3737844]
+2025-09-15T20:53:50: INFO:     Waiting for application startup.
+2025-09-15T20:53:50: INFO:__main__:시스템 초기화 시작...
+2025-09-15T20:53:50: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-15T20:53:50: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-15T20:53:50: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:157: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-15T20:53:50:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-15T20:53:50: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-15T20:53:54: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-15T20:53:54: INFO:__main__:임베딩 모델 로드 완료
+2025-09-15T20:53:54: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-15T20:53:54: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-15T20:53:54: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-15T20:53:54: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-15T20:53:54: INFO:__main__:벡터 스토어 설정 완료
+2025-09-15T20:53:54: INFO:__main__:검색 시스템 설정 중...
+2025-09-15T20:53:54: INFO:__main__:벡터 검색 설정 완료
+2025-09-15T20:53:54: INFO:__main__:검색 시스템 설정 완료
+2025-09-15T20:53:54: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-15T20:53:55: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-15T20:53:55: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-15T20:53:55: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-15T20:53:56: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-15T20:53:56: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.62it/s]
+2025-09-15T20:53:57: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:03,  2.59it/s]
+2025-09-15T20:53:57: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.47it/s]
+2025-09-15T20:53:58: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.20it/s]
+2025-09-15T20:53:58: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.07it/s]
+2025-09-15T20:53:59: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:02,  1.98it/s]
+2025-09-15T20:53:59: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.90it/s]
+2025-09-15T20:54:00: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.88it/s]
+2025-09-15T20:54:00: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.87it/s]
+2025-09-15T20:54:01: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.33it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.15it/s]
+2025-09-15T20:54:01: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-15T20:54:01: INFO:__main__:대화 모델 로드 완료
+2025-09-15T20:54:01: INFO:__main__:시스템 초기화 완료
+2025-09-15T20:54:01: INFO:     Application startup complete.
+2025-09-15T20:54:01: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-15T20:55:08: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:563: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
+2025-09-15T20:55:08:   docs = chatbot.retriever.get_relevant_documents(request.question)

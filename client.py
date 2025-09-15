@@ -5,7 +5,7 @@ import sys
 from typing import Dict, Any
 
 class PregnancyChatbotClient:
-    def __init__(self, server_url: str = "http://localhost:9000"):
+    def __init__(self, server_url: str = "http://14.39.95.228:9000"):
         self.server_url = server_url
         self.session = requests.Session()
     

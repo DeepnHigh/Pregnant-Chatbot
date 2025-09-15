@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
 from contextlib import asynccontextmanager
@@ -405,13 +406,15 @@ class SimplePregnancyChatbot:
             
             # 스트리밍 결과 처리
             try:
+                full_answer = ""
                 for new_text in streamer:
                     if new_text:
+                        full_answer += new_text
                         # 토큰별로 전송
-                        yield f"data: {json.dumps({'token': new_text, 'finished': False})}\n\n"
-                
-                # 완료 신호 전송
-                yield f"data: {json.dumps({'token': '', 'finished': True})}\n\n"
+                        yield f"data: {json.dumps({'token': new_text, 'finished': False}, ensure_ascii=False)}\n\n"
+
+                # 최종 전체 답변 이벤트 전송
+                yield f"data: {json.dumps({'type': 'final', 'answer': full_answer, 'finished': True}, ensure_ascii=False)}\n\n"
                 
             except Exception as stream_error:
                 logger.error(f"스트리밍 처리 오류: {stream_error}")
@@ -533,6 +536,15 @@ async def lifespan(app: FastAPI):
 # FastAPI 앱 생성
 app = FastAPI(title="임신과 출산 RAG 챗봇 (Simple)", version="0.1.0", lifespan=lifespan)
 
+# CORS 설정: 외부 접근 허용 (필요시 특정 도메인으로 제한 권장)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """채팅 엔드포인트"""
@@ -566,7 +578,7 @@ async def chat_stream(request: ChatRequest):
         def generate():
             # 소스 정보 먼저 전송
             sources = [doc.metadata.get("source", "Unknown") for doc in docs]
-            sources_info = f"data: {json.dumps({'sources': sources, 'type': 'sources'})}\n\n"
+            sources_info = f"data: {json.dumps({'sources': sources, 'type': 'sources'}, ensure_ascii=False)}\n\n"
             yield sources_info
             
             # 스트리밍 응답 생성
@@ -575,8 +587,12 @@ async def chat_stream(request: ChatRequest):
         
         return StreamingResponse(
             generate(),
-            media_type="text/plain",
-            headers={"Cache-Control": "no-cache", "Connection": "keep-alive"}
+            media_type="text/event-stream; charset=utf-8",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no"
+            }
         )
         
     except Exception as e:
@@ -584,8 +600,12 @@ async def chat_stream(request: ChatRequest):
         error_response = f"data: {json.dumps({'token': '서버 오류가 발생했습니다.', 'finished': True})}\n\n"
         return StreamingResponse(
             iter([error_response]),
-            media_type="text/plain",
-            headers={"Cache-Control": "no-cache", "Connection": "keep-alive"}
+            media_type="text/event-stream; charset=utf-8",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no"
+            }
         )
 
 @app.get("/health")

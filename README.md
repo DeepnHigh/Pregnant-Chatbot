@@ -137,11 +137,37 @@ dataset/
 └── 제2회 영유아 패널 학술대회용 데이터/
 ```
 
+## 프로젝트 파일 구조
+
+```
+STEAM/
+├── chatbot_v0.1.py          # 메인 서버 코드
+├── client.py                # 클라이언트 코드
+├── ecosystem.config.js      # PM2 설정 파일
+├── pm2_start.sh            # PM2 시작 스크립트
+├── pm2_manage.sh           # PM2 관리 스크립트
+├── run_server.sh           # 직접 실행 스크립트
+├── requirements.txt         # Python 의존성
+├── pregnancy-chatbot.service # Systemd 서비스
+├── README.md               # 프로젝트 문서
+├── dataset/                # 데이터셋 폴더
+│   ├── *.pdf               # PDF 문서들
+│   └── *.xlsx              # 엑셀 파일들
+├── vectorstore/            # FAISS 벡터 데이터베이스
+│   ├── index.faiss
+│   └── index.pkl
+└── logs/                   # PM2 로그 파일들
+    ├── pm2-error.log
+    ├── pm2-out.log
+    └── pm2-combined.log
+```
+
 ## 아키텍처
 
 ### 서버 구성
-- **FastAPI**: REST API 서버
-- **ko-gemma2-9b**: 대화형 AI 모델
+- **FastAPI**: REST API 서버 (스트리밍 지원)
+- **ko-gemma2-9b**: 대화형 AI 모델 (4-bit 양자화)
+- **TextIteratorStreamer**: 실시간 토큰 스트리밍
 - **FAISS**: 벡터 데이터베이스
 - **LangChain**: RAG 파이프라인
 - **PyPDF2/OpenPyXL**: 문서 파싱
@@ -151,15 +177,63 @@ dataset/
 2. **BM25 검색**: 키워드 기반 검색 (가중치: 0.3)
 3. **앙상블**: 두 검색 결과를 결합하여 최종 결과 도출
 
+## 실시간 스트리밍 기능
+
+### 기술적 특징
+- **TextIteratorStreamer**: Transformers 라이브러리의 내장 스트리밍 기능 활용
+- **멀티스레딩**: 모델 생성과 스트리밍이 별도 스레드에서 병렬 처리
+- **효율적 성능**: 토큰당 모델 호출 방식 대비 256배 성능 향상
+- **Server-Sent Events**: 웹 표준 SSE 프로토콜로 실시간 데이터 전송
+
+### 스트리밍 동작 방식
+1. 클라이언트가 `/chat/stream` 엔드포인트로 질문 전송
+2. 서버에서 관련 문서 검색 및 소스 정보 먼저 전송
+3. 별도 스레드에서 `model.generate()` 실행
+4. `TextIteratorStreamer`가 생성되는 토큰을 실시간으로 캐치
+5. 각 토큰을 JSON 형태로 즉시 클라이언트에 스트리밍
+6. 생성 완료 시 `finished: true` 신호 전송
+
+### 성능 비교
+| 방식 | 토큰당 모델 호출 | 응답 시작 시간 | 전체 응답 시간 | CPU/GPU 효율 |
+|------|-----------------|----------------|----------------|---------------|
+| 일반 응답 | 1번 | 느림 | 보통 | 높음 |
+| 이전 스트리밍 | 256번 | 매우 느림 | 매우 느림 | 매우 낮음 |
+| **현재 스트리밍** | **1번** | **빠름** | **빠름** | **매우 높음** |
+
 ## 사용 예시
 
 ### 서버 시작
+
+#### 방법 1: 직접 실행
 ```bash
 # 서버 실행
 python3 chatbot_v0.1.py
 
 # 서버가 http://localhost:9000 에서 실행됩니다
 ```
+
+#### 방법 2: PM2로 백그라운드 실행 (추천) 🚀
+```bash
+# PM2로 시작 (초기 설정 포함)
+./pm2_start.sh
+
+# 또는 간단히
+./pm2_manage.sh start
+
+# 상태 확인
+./pm2_manage.sh status
+
+# 실시간 로그 보기
+./pm2_manage.sh logs
+```
+
+**PM2 주요 명령어:**
+- `./pm2_manage.sh start` - 서버 시작
+- `./pm2_manage.sh stop` - 서버 중지
+- `./pm2_manage.sh restart` - 서버 재시작
+- `./pm2_manage.sh logs` - 실시간 로그
+- `./pm2_manage.sh monit` - 모니터링
+- `./pm2_manage.sh delete` - 프로세스 삭제
 
 ### 클라이언트 사용
 ```bash
@@ -168,10 +242,24 @@ python3 client.py
 
 - 클라이언트 pc에서 실행하여야 합니다.
 
+# 실시간 스트리밍 출력 예시
+🤖 답변 (실시간 스트리밍)
+------------------------------
+임신중운동은일반적으로임신12주이후부터시작하는것이권장됩니다...
+
+(응답시간: 3.45초)
+
+📚 참고 자료:
+  1. dataset/난임 가이드북.pdf
+  2. dataset/expert_qna.xlsx
+
+신뢰도: 0.67
+
 # 질문 예시
 질문: 임신 중 금기 식품은 무엇인가요?
 질문: 출산 후 산후조리는 어떻게 해야 하나요?
 질문: 임신 중 운동은 언제부터 시작할 수 있나요?
+질문: 태아의 성장 발달 과정은 어떻게 되나요?
 ```
 
 ## 모니터링
@@ -210,6 +298,15 @@ sudo journalctl -u pregnancy-chatbot -f
    - 서버 로그에서 TextIteratorStreamer 관련 오류 확인
    - 모델 메모리 부족 시 4-bit 양자화 설정 확인
    - 방화벽 설정 확인
+
+5. **PM2 관련 문제**
+   - PM2 설치: `npm install -g pm2`
+   - 프로세스 상태 확인: `./pm2_manage.sh status`
+   - 로그 확인: `./pm2_manage.sh logs`
+   - 에러 로그: `./pm2_manage.sh error-logs`
+   - 모니터링: `./pm2_manage.sh monit`
+   - 프로세스 재시작: `./pm2_manage.sh restart`
+   - Conda 환경 문제: `ecosystem.config.js`에서 Python 경로 확인
 
 ## 라이선스
 

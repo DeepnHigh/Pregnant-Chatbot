@@ -15,4 +15,4 @@ echo "현재 conda 환경: $CONDA_DEFAULT_ENV"
 
 # 서버 실행
 echo "서버를 시작합니다..."
-python chatbot.py
+python chatbot_v0.1.py
