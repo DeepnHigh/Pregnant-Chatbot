@@ -981,3 +981,67 @@
 2025-09-15T20:54:01: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
 2025-09-15T20:55:08: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:563: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
 2025-09-15T20:55:08:   docs = chatbot.retriever.get_relevant_documents(request.question)
+2025-09-15T21:29:08: WARNING:  Invalid HTTP request received.
+2025-09-16T01:48:41: WARNING:  Invalid HTTP request received.
+2025-09-16T01:48:53: WARNING:  Invalid HTTP request received.
+2025-09-16T01:48:56: WARNING:  Invalid HTTP request received.
+2025-09-16T02:20:32: WARNING:  Invalid HTTP request received.
+2025-09-16T02:20:32: WARNING:  Invalid HTTP request received.
+2025-09-16T05:28:22: WARNING:  Invalid HTTP request received.
+2025-09-16T05:28:36: WARNING:  Invalid HTTP request received.
+2025-09-16T05:28:40: WARNING:  Invalid HTTP request received.
+2025-09-16T09:22:42: WARNING:  Invalid HTTP request received.
+2025-09-16T13:27:08: WARNING:  Invalid HTTP request received.
+2025-09-16T13:29:48: WARNING:  Invalid HTTP request received.
+2025-09-16T13:32:41: WARNING:  Invalid HTTP request received.
+2025-09-16T16:48:25: WARNING:  Invalid HTTP request received.
+2025-09-16T16:48:41: WARNING:  Invalid HTTP request received.
+2025-09-16T16:48:47: WARNING:  Invalid HTTP request received.
+2025-09-16T17:57:07: INFO:     Shutting down
+2025-09-16T17:57:07: INFO:     Waiting for application shutdown.
+2025-09-16T17:57:07: INFO:     Application shutdown complete.
+2025-09-16T17:57:07: INFO:     Finished server process [3737844]
+2025-09-16T17:57:10: INFO:__main__:GPU 개수: 2
+2025-09-16T17:57:10: INFO:__main__:GPU 0: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-16T17:57:10: INFO:__main__:GPU 1: NVIDIA GeForce RTX 4090 (23.6GB)
+2025-09-16T17:57:10: INFO:__main__:GPU 메모리 최적화 설정 완료
+2025-09-16T17:57:10: INFO:     Started server process [2774015]
+2025-09-16T17:57:10: INFO:     Waiting for application startup.
+2025-09-16T17:57:10: INFO:__main__:시스템 초기화 시작...
+2025-09-16T17:57:10: INFO:__main__:임베딩 모델 로딩 중...
+2025-09-16T17:57:10: INFO:__main__:임베딩 모델을 GPU 0에 배치
+2025-09-16T17:57:10: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:157: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+2025-09-16T17:57:10:   self.embeddings = HuggingFaceEmbeddings(
+2025-09-16T17:57:10: INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-09-16T17:57:15: INFO:__main__:임베딩 모델 로딩 완료
+2025-09-16T17:57:15: INFO:__main__:임베딩 모델 로드 완료
+2025-09-16T17:57:15: INFO:__main__:기존 벡터 스토어를 로딩합니다...
+2025-09-16T17:57:15: INFO:faiss.loader:Loading faiss with AVX2 support.
+2025-09-16T17:57:15: INFO:faiss.loader:Successfully loaded faiss with AVX2 support.
+2025-09-16T17:57:15: INFO:__main__:기존 벡터 스토어 로딩 완료
+2025-09-16T17:57:15: INFO:__main__:벡터 스토어 설정 완료
+2025-09-16T17:57:15: INFO:__main__:검색 시스템 설정 중...
+2025-09-16T17:57:15: INFO:__main__:벡터 검색 설정 완료
+2025-09-16T17:57:15: INFO:__main__:검색 시스템 설정 완료
+2025-09-16T17:57:15: INFO:__main__:gemma-9b 모델 로딩 중...
+2025-09-16T17:57:16: INFO:__main__:사용 가능한 GPU 개수: 2
+2025-09-16T17:57:16: INFO:__main__:GPU 2개에 분산 배치 설정
+2025-09-16T17:57:16: The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+2025-09-16T17:57:17: Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]
+2025-09-16T17:57:17: Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:03,  2.58it/s]
+2025-09-16T17:57:18: Loading checkpoint shards:  20%|██        | 2/10 [00:00<00:02,  2.69it/s]
+2025-09-16T17:57:18: Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:02,  2.48it/s]
+2025-09-16T17:57:19: Loading checkpoint shards:  40%|████      | 4/10 [00:01<00:02,  2.22it/s]
+2025-09-16T17:57:19: Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  2.08it/s]
+2025-09-16T17:57:20: Loading checkpoint shards:  60%|██████    | 6/10 [00:02<00:01,  2.00it/s]
+2025-09-16T17:57:20: Loading checkpoint shards:  70%|███████   | 7/10 [00:03<00:01,  1.94it/s]
+2025-09-16T17:57:21: Loading checkpoint shards:  80%|████████  | 8/10 [00:03<00:01,  1.90it/s]
+2025-09-16T17:57:21: Loading checkpoint shards:  90%|█████████ | 9/10 [00:04<00:00,  1.88it/s]
+2025-09-16T17:57:21: Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.34it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:04<00:00,  2.16it/s]
+2025-09-16T17:57:22: INFO:__main__:gemma-9b 모델 로딩 완료
+2025-09-16T17:57:22: INFO:__main__:대화 모델 로드 완료
+2025-09-16T17:57:22: INFO:__main__:시스템 초기화 완료
+2025-09-16T17:57:22: INFO:     Application startup complete.
+2025-09-16T17:57:22: INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+2025-09-16T17:57:59: /mnt/hdd_sda/projects/STEAM/chatbot_v0.1.py:439: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
+2025-09-16T17:57:59:   docs = self.retriever.get_relevant_documents(question)

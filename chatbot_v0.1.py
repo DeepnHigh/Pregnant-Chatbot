@@ -307,7 +307,7 @@ class SimplePregnancyChatbot:
             with torch.no_grad():
                 outputs = self.model.generate(
                     **inputs,
-                    max_new_tokens=256,
+                    max_new_tokens=2048,
                     temperature=0.7,
                     do_sample=True,
                     pad_token_id=self.tokenizer.eos_token_id,
@@ -383,13 +383,13 @@ class SimplePregnancyChatbot:
                 self.tokenizer,
                 skip_prompt=True,
                 skip_special_tokens=True,
-                timeout=30.0
+                timeout=None
             )
             
             # 생성 설정
             generation_kwargs = {
                 **inputs,
-                "max_new_tokens": 256,
+                "max_new_tokens": 2048,
                 "temperature": 0.7,
                 "do_sample": True,
                 "top_k": 50,
